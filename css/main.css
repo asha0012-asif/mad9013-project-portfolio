@@ -1,11 +1,11 @@
 :root {
     /** CSS DARK THEME PRIMARY COLORS */
-    --color-primary-100: #3c7a8a;
-    --color-primary-200: #538896;
-    --color-primary-300: #6996a3;
-    --color-primary-400: #7fa5b0;
-    --color-primary-500: #94b3bc;
-    --color-primary-600: #a9c2c9;
+    --color-primary-100: #382bf0;
+    --color-primary-200: #5e43f3;
+    --color-primary-300: #7a5af5;
+    --color-primary-400: #9171f8;
+    --color-primary-500: #a688fa;
+    --color-primary-600: #ba9ffb;
 
     /** CSS DARK THEME SURFACE COLORS */
     --color-surface-100: #121212;
@@ -25,6 +25,12 @@
 
     /* ANIMATION AND TRANSITION TIMINGS */
     --transition: 0.2s;
+
+    /* SIZES */
+    --banner-size: 75vh;
+
+    /* POSITIONS */
+    --position-horizontal: flex-start;
 }
 
 /* ------ LINKS ------ */
@@ -45,6 +51,56 @@ ul {
     margin: 0;
 }
 
+/* ------ TYPE HIERARCHY ------ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.3;
+}
+
+p, 
+small {
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2.027rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.802rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.602rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.424rem;
+}
+
+h5 {
+  font-size: 1.266rem;
+}
+
+h6 {
+  font-size: 1.125rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+small {
+  font-size: 0.889rem;
+}
+
 /* ------ CONTAINER ------ */
 .container {
     width: min(65rem, 100%);
@@ -52,10 +108,13 @@ ul {
     margin: 0 auto;
 }
 
+/* --------- MOBILE SIZE + --------- */
+
 /* ------ HEADER ------ */
 .header {
     background-color: var(--color-surface-100);
     color: #fff;
+    border-bottom: 0.0125rem solid #fff;
 }
 
 .header .container {
@@ -139,7 +198,66 @@ ul {
     color: #fff;
 }
 
+/* ------ BANNER ------  */
+.banner {
+    background-color: #121212;
+    color: #fff;
+}
+
+.banner .container {
+    min-height: var(--banner-size); 
+
+    display: flex;
+    justify-content: var(--position-horizontal);
+    align-items: center;
+
+    padding: 0 2rem;
+}
+
+/* - BANNER CONTENT - */
+.banner__content {
+    width: min(35em, 100%);
+    color: #fff;
+}
+
+.banner__subtitle {
+    color: var(--color-primary-200);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.banner__text {
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--color-primary-200);
+}
+
+/* --------- TABLET SIZE + --------- */
 @media only screen and (min-width: 45rem) {
+    /* --- TYPE HIERARCHY --- */
+    h1 {
+        font-size: 2.488rem;
+    }
+
+    h2 {
+        font-size: 2.074rem;
+    }
+
+    h3 {
+        font-size: 1.728rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    small {
+        font-size: 0.833rem;
+    }
+
+    /* ------ HEADER ------ */
     .header .container {
         width: 100vw;
         padding: 0 1.5rem;
@@ -171,7 +289,8 @@ ul {
     }
 }
 
-@media only screen and (min-width: 65rem) {
+/* --------- LAPTOP SIZE + --------- */
+@media only screen and (min-width: 65rem) {        
     .header .container {
         width: min(65rem, 100%);
     }
