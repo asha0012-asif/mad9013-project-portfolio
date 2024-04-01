@@ -3,30 +3,39 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Asif Ashadullah</title>
+        <title>Portfolio</title>
 
         <link rel="stylesheet" href="./css/css-reset.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
 
     <body>
-        <header>
-            <h1>Portfolio</h1>
+        <header class="header">
+            <div class="container">
+              <div class="header__main">
+                <a href="./index.html" class="header__logo">
+                  <img src="./images/" alt="Asif Ashadullah Logo" />
+                </a>
 
-            <nav>
-                <ul>
-                    <a href="./index.html">
-                        <li>Home</li>
-                    </a>
-                    <a href="./portfolio.html">
-                        <li>Portfolio</li>
-                    </a>
-                    <a href="./contact.html">
-                        <li>Contact</li>
-                    </a>
+                <!-- create lines with spans (so that this becomes animatable) -->
+                <div id="header__nav-toggle" class="header__nav-toggle">
+                  <span class="nav-tog nav-tog--top"></span>
+                  <span class="nav-tog nav-tog--middle"></span>
+                  <span class="nav-tog nav-tog--bottom"></span>
+                </div>
+
+              </div>
+      
+              <!-- for mobile sizes, header__nav will be hidden at first | rework to fit with toggle -->
+              <nav class="header__nav header__nav--hide">
+                <ul class="header__list">
+                  <a href="./index.html" class="header__list-item"><li>Home</li></a>
+                  <a href="./portfolio.html" class="header__list-item"><li>Portfolio</li></a>
+                  <a href="./contact.html" class="header__list-item"><li>Contact</li></a>
                 </ul>
-            </nav>
-        </header>
+              </nav>
+            </div>
+          </header>
 
         <main>
 
