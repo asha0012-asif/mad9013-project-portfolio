@@ -94,11 +94,18 @@ h6 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 small {
   font-size: 0.889rem;
+}
+
+/* --- IMAGES --- */
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 /* ------ CONTAINER ------ */
@@ -211,7 +218,7 @@ small {
     justify-content: var(--position-horizontal);
     align-items: center;
 
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 }
 
 /* - BANNER CONTENT - */
@@ -234,6 +241,110 @@ small {
     color: var(--color-primary-200);
 }
 
+/* ------ SKILLS DISPLAY ------ */
+.skills {
+    background-color: var(--color-surface-100);
+    color: #fff;
+}
+
+.skills .container {
+    padding: 5rem 1.5rem;   
+}
+
+.skills-tabs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin: 2rem 0;
+}
+
+.skills-tabs__tab {
+    background-color: var(--color-surface-200);
+    color: #fff;
+
+    padding: 0.5rem 1rem;
+    border: 0.0125rem solid #fff4;
+    border-radius: 1em;
+}
+
+.skills-tabs__tab.active,
+.skills-tabs__tab:where(:hover, :focus-visible) {
+    background-color: var(--color-primary-100);
+    border-color: var(--color-primary-100);
+}
+
+/* --- CARDS --- */
+.card-grid {
+    list-style-type: none;
+    padding: 0;
+
+    display: grid;
+    --cols: 1;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--color-surface-200);
+    /* box-shadow: 0 0.5rem .5rem #fff1; */
+  
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+
+    padding: 1.5rem;
+    border-radius: 1em;
+    border: 0.0125rem solid #fff4;
+}
+
+.card a {
+    display: inherit;
+    flex-direction: inherit;
+    flex: inherit;
+}
+
+.card:hover,
+.card:focus-visible {
+    cursor: pointer;
+    box-shadow: 0 .25rem .75rem #fff2;
+}
+
+.card__image {
+    padding: 0 3rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    margin-bottom: 1.5rem;
+}
+
+.card__image img {
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+}
+
+/* - CARD CONTENT - */
+.card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    text-align: center;
+    color: #fff;
+    /* padding: 1.5rem; */
+
+    flex: 2;
+}
+
+.card__content-title {
+    flex: 1;
+}
+
+.card__content-text {
+    flex: 1;
+}
+
 /* --------- TABLET SIZE + --------- */
 @media only screen and (min-width: 45rem) {
     /* --- TYPE HIERARCHY --- */
@@ -250,7 +361,7 @@ small {
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
     small {
@@ -287,11 +398,21 @@ small {
         flex-direction: row;
         justify-content: flex-end;
     }
+
+    /* --- SKILLS DISPLAY SECTION --- */
+    .card-grid {
+        --cols: 2;
+    }
 }
 
 /* --------- LAPTOP SIZE + --------- */
 @media only screen and (min-width: 65rem) {        
     .header .container {
         width: min(65rem, 100%);
+    }
+
+    /* --- SKILLS DISPLAY SECTION --- */
+    .card-grid {
+        --cols: 3;
     }
 }

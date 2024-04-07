@@ -9,3 +9,4 @@ The main purpose of this is to use my semester's worth of knowledge in HTML and 
 ## Languages Used
 - HTML
 - CSS
+- Javascript
