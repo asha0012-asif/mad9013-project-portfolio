@@ -205,6 +205,43 @@ img {
     color: #fff;
 }
 
+/* --- FOOTER --- */
+.footer {
+    background-color: var(--color-surface-100);
+    color: #fff;
+}
+
+.footer .container {
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.5rem;
+}
+
+.socials-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.socials__image {
+    width: 2.5rem;
+}
+
+.socials__image img {
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+}
+
+.socials__image img:where(:hover, :focus-visible) {
+    translate: 0 -0.25rem;
+}
+
 /* ------ BANNER ------  */
 .banner {
     background-color: #121212;
@@ -309,6 +346,8 @@ img {
 .card:focus-visible {
     cursor: pointer;
     box-shadow: 0 .25rem .75rem #fff2;
+
+    translate: 0 -0.75rem;
 }
 
 .card__image {
