@@ -1,3 +1,17 @@
+/* 
+ORDER
+- ROOT (VARIABLES)
+- SITE WIDE GENERAL STYLES
+    - FONTS
+    - TYPE HIERARCHY
+    - ACCESSIBILITY
+    - LAYOUT
+- PATTERNS & COMPONENTS
+
+TIPS
+- USE NESTING / ADD MEDIA QUERIES UNDERNEATH RELEVANT SECTION
+*/
+
 :root {
     /** CSS DARK THEME PRIMARY COLORS */
     --color-primary-100: #382bf0;
@@ -101,6 +115,29 @@ small {
   font-size: 0.889rem;
 }
 
+/* TABLET SIZES + */
+@media only screen and (min-width: 45rem) {
+    h1 {
+        font-size: 2.488rem;
+    }
+
+    h2 {
+        font-size: 2.074rem;
+    }
+
+    h3 {
+        font-size: 1.728rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    small {
+        font-size: 0.833rem;
+    }
+}
+
 /* --- IMAGES --- */
 img {
     width: 100%;
@@ -114,8 +151,6 @@ img {
     padding-inline: auto;
     margin: 0 auto;
 }
-
-/* --------- MOBILE SIZE + --------- */
 
 /* ------ HEADER ------ */
 .header {
@@ -203,6 +238,46 @@ img {
 .header__list-item li:where(:hover, :focus) {
     text-decoration: underline;
     color: #fff;
+}
+
+/* TABLET SIZES + */
+@media only screen and (min-width: 45rem) {
+    .header .container {
+        width: 100vw;
+        padding: 0 1.5rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__logo {
+        padding: 0;
+    }
+    
+    /* no matter the reason, don't show nav-toggle and keep display block on nav */
+    .header__nav-toggle {
+        display: none;
+    }
+
+    .header__nav {
+        display: block;
+        flex: 3;
+    }
+
+    .header__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+/* LAPTOP SIZES + */
+@media only screen and (min-width: 65rem) {
+    .header .container {
+        width: min(65rem, 100%);
+    }
 }
 
 /* --- FOOTER --- */
@@ -384,74 +459,39 @@ img {
     flex: 1;
 }
 
-/* --------- TABLET SIZE + --------- */
+/* TABLET SIZES + */
 @media only screen and (min-width: 45rem) {
-    /* --- TYPE HIERARCHY --- */
-    h1 {
-        font-size: 2.488rem;
-    }
-
-    h2 {
-        font-size: 2.074rem;
-    }
-
-    h3 {
-        font-size: 1.728rem;
-    }
-
-    p {
-        font-size: 1.25rem;
-    }
-
-    small {
-        font-size: 0.833rem;
-    }
-
-    /* ------ HEADER ------ */
-    .header .container {
-        width: 100vw;
-        padding: 0 1.5rem;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .header__logo {
-        padding: 0;
-    }
-    
-    /* no matter the reason, don't show nav-toggle and keep display block on nav */
-    .header__nav-toggle {
-        display: none;
-    }
-
-    .header__nav {
-        display: block;
-        flex: 3;
-    }
-
-    .header__list {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-    /* --- SKILLS DISPLAY SECTION --- */
     .card-grid {
         --cols: 2;
     }
 }
 
-/* --------- LAPTOP SIZE + --------- */
+/* LAPTOP SIZES + */
 @media only screen and (min-width: 65rem) {        
-    .header .container {
-        width: min(65rem, 100%);
-    }
-
-    /* --- SKILLS DISPLAY SECTION --- */
     .card-grid {
         --cols: 3;
     }
+}
+
+/* --- PORTFOLIO SECTION --- */
+.portfolio {
+    background-color: var(--color-surface-100);
+    padding: 1.5rem;
+}
+
+.portfolio .container {
+    background-color: var(--color-surface-200);
+    
+    padding: 3rem;
+    border: 0.0125rem solid #fff4;
+    border-radius: 0.5rem;
+}
+
+.portfolio .card-group__title {
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio .card {
+    background-color: var(--color-surface-300);
 }
