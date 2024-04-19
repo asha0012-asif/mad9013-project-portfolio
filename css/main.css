@@ -432,7 +432,7 @@ img {
     margin-bottom: 1.5rem;
 }
 
-.card__image img {
+.skills .card__image img {
     object-fit: contain;
     aspect-ratio: 1 / 1;
 }
@@ -449,10 +449,6 @@ img {
     /* padding: 1.5rem; */
 
     flex: 2;
-}
-
-.card__content-title {
-    flex: 1;
 }
 
 .card__content-text {
@@ -479,12 +475,8 @@ img {
     padding: 1.5rem;
 }
 
-.portfolio .container {
-    background-color: var(--color-surface-200);
-    
+.portfolio .container {    
     padding: 3rem;
-    border: 0.0125rem solid #fff4;
-    border-radius: 0.5rem;
 }
 
 .portfolio .card-group__title {
@@ -494,6 +486,16 @@ img {
 
 .portfolio .card {
     background-color: var(--color-surface-300);
+}
+
+.portfolio .card__image {
+    padding: 0;
+}
+
+.portfolio .card__image img {
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    border-radius: 0.25em;
 }
 
 /* --- CONTACT PAGE --- */
