@@ -1,4 +1,4 @@
-###### Project Status: In Progress
+###### Project Status: Complete
 # Project: My Portfolio
 
 This my portfolio website showcasing the skills I've developed and projects I've built during my first semester of the Mobile Applications Design and Development program at Algonquin College. 
