@@ -495,3 +495,94 @@ img {
 .portfolio .card {
     background-color: var(--color-surface-300);
 }
+
+/* --- CONTACT PAGE --- */
+fieldset {
+    display: contents;
+}
+
+.contact {
+    background-color: var(--color-surface-100);
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+}
+
+.contact .container {
+    background-color: var(--color-surface-200);
+    
+    max-width: 40rem;
+    padding: 3rem 2rem;
+    border: 0.0125rem solid #fff4;
+    border-radius: 0.5rem;
+}
+
+.contact__title {
+    color: var(--color-primary-300);
+    margin-bottom: 0.5rem;
+}
+
+.contact__text {
+    color: #fff;
+    margin-bottom: 1.125rem;
+    font-size: 1.125rem;
+} 
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    margin-top: 2rem;
+}
+
+.form-grid__unit {
+    display: grid;
+    gap: 0.25rem;
+}
+
+label {
+    color: #fff;
+
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    font-size: 1rem;
+
+    padding: 0.5em;
+    border-radius: 0.25em;
+    border: 0.0625rem solid var(--color-primary-300);
+}
+
+input:valid,
+textarea:valid {
+    border: 0.125rem solid hsla(152, 56%, 48%, 60%);
+}
+
+.contact .btn {
+    cursor: pointer;
+    background-color: var(--color-primary-200);
+    color: #fff;
+    border-radius: 0.25em;
+    border: none;
+
+
+    padding: 0.5rem;
+}
+
+.contact .btn:where(:hover, :focus-visible) {
+    background-color: var(--color-primary-300);
+}
+
+@media only screen and (min-width: 45rem) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-grid__unit:nth-child(5),
+    .form-grid__unit:last-child {
+        grid-column: span 2;
+    }
+}
